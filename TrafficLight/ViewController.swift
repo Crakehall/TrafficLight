@@ -27,7 +27,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped() {
-
+        if startButton.currentTitle == "START" {
+            startButton.setTitle("NEXT", for: .normal)
+        }
+        
+        switch currentTrafficLightColor {
+        case .red:
+            redColorView.alpha = trafficLightOn
+            greenColorView.alpha = trafficLightsOff
+            currentTrafficLightColor = .yellow
+        case .yellow:
+            yellowColorView.alpha = trafficLightOn
+            redColorView.alpha = trafficLightsOff
+            currentTrafficLightColor = .green
+        case .green:
+            greenColorView.alpha = trafficLightOn
+            yellowColorView.alpha = trafficLightsOff
+            currentTrafficLightColor = .red
+        }
     }
     
 }

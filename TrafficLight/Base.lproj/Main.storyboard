@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,58 +12,65 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJ5-IS-zsa" userLabel="YellowColorView">
-                                <rect key="frame" x="132" y="275" width="150" height="150"/>
+                                <rect key="frame" x="132" y="280" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.98071100225686769" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="gJ5-IS-zsa" secondAttribute="height" multiplier="1:1" id="E08-jZ-ugO"/>
+                                    <constraint firstAttribute="width" secondItem="gJ5-IS-zsa" secondAttribute="height" multiplier="1:1" id="dAK-n7-EMJ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="70"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AG3-9u-si8" userLabel="GreenColorView">
-                                <rect key="frame" x="132" y="485" width="150" height="150"/>
+                                <rect key="frame" x="132" y="495" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.041186538180808085" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="AG3-9u-si8" secondAttribute="height" multiplier="1:1" id="40O-LW-aa6"/>
+                                    <constraint firstAttribute="width" secondItem="AG3-9u-si8" secondAttribute="height" multiplier="1:1" id="4qS-5a-aPl"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="70"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Uu-7m-P7Z" userLabel="RedColorView">
                                 <rect key="frame" x="132" y="65" width="150" height="150"/>
-                                <color key="backgroundColor" red="1" green="0.12176265888851379" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.1217626589" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="5Uu-7m-P7Z" secondAttribute="height" multiplier="1:1" id="kUN-H6-PTW"/>
+                                    <constraint firstAttribute="width" secondItem="5Uu-7m-P7Z" secondAttribute="height" multiplier="1:1" id="SxT-qd-1pF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="70"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahE-ac-BSb" userLabel="StartButton">
-                                <rect key="frame" x="132" y="769.5" width="150" height="47.5"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <rect key="frame" x="132" y="775.66666666666663" width="150" height="46.333333333333371"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Ef9-xX-QLF"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="START">
-                                    <backgroundConfiguration key="background">
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="16">
                                         <color key="backgroundColor" systemColor="linkColor"/>
                                     </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="START">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="27"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -81,10 +88,10 @@
                         <constraints>
                             <constraint firstItem="5Uu-7m-P7Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="8JY-kC-Cmn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gJ5-IS-zsa" secondAttribute="trailing" constant="132" id="A5V-Rr-h8C"/>
-                            <constraint firstItem="AG3-9u-si8" firstAttribute="top" secondItem="gJ5-IS-zsa" secondAttribute="bottom" constant="60" id="ADX-CY-IM4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ahE-ac-BSb" secondAttribute="bottom" constant="45" id="N0l-Vp-Di4"/>
+                            <constraint firstItem="AG3-9u-si8" firstAttribute="top" secondItem="gJ5-IS-zsa" secondAttribute="bottom" constant="65" id="ADX-CY-IM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ahE-ac-BSb" secondAttribute="bottom" constant="40" id="N0l-Vp-Di4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Uu-7m-P7Z" secondAttribute="trailing" constant="132" id="VP7-U2-J7s"/>
-                            <constraint firstItem="gJ5-IS-zsa" firstAttribute="top" secondItem="5Uu-7m-P7Z" secondAttribute="bottom" constant="60" id="XZE-2z-g9h"/>
+                            <constraint firstItem="gJ5-IS-zsa" firstAttribute="top" secondItem="5Uu-7m-P7Z" secondAttribute="bottom" constant="65" id="XZE-2z-g9h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AG3-9u-si8" secondAttribute="trailing" constant="132" id="cSG-aj-81F"/>
                             <constraint firstItem="AG3-9u-si8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="epK-hE-7B6"/>
                             <constraint firstItem="ahE-ac-BSb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fXI-FX-vE5"/>
